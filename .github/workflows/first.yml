@@ -9,6 +9,10 @@ jobs:
           uses: actions/checkout@v2
         - name: Step two
           run: env | sort
+        - name: Angular Github Actions
+          uses: mayur-rawte/github-angular-actions@latest
+        - name: Angular Problem Matchers
+          uses: EdricChan03/angular-problem-matchers-action@v0.0.0
     job2:
         name: Second job
         runs-on: windows-latest
@@ -17,3 +21,7 @@ jobs:
           uses: actions/checkout@v2
         - name: Step two
           run: "Get-ChildItem Env: | Sort-Object Name"
+        - name: Angular Github Actions
+          uses: mayur-rawte/github-angular-actions@latest
+        - name: Angular Problem Matchers
+          uses: EdricChan03/angular-problem-matchers-action@v0.0.0
