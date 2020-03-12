@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button [class.active]="toggleActive" (click)="toggleRightSidenav();">
+            <mat-icon class="padding-icon" aria-hidden="false" aria-label="open sidenav">menu</mat-icon>
+        </button>
+        <span>Hussain For Community</span>
+        <span class="example-spacer"></span>
+
+        <button mat-button [matMenuTriggerFor]="aboutus">About Us</button>
+        <button mat-button [matMenuTriggerFor]="programAndService">Program & Services</button>
+        <button mat-button [matMenuTriggerFor]="multimedia">Multimedia</button>
+
+        <mat-menu #aboutus="matMenu" xPosition="after">
+            <button mat-menu-item routerLink="/Vision, Mission & Value">Vision, Mission & Value</button>
+            <button mat-menu-item  routerLink="/History and Timeline">History and Timeline</button>
+            <button mat-menu-item>Programs</button>
+            <button mat-menu-item>Memmbership</button>
+            <button mat-menu-item>Board of Director</button>
+            <button mat-menu-item>Contact Us</button>
+          </mat-menu>
+
+        <mat-menu #programAndService="matMenu" xPosition="after">
+            <button mat-menu-item [matMenuTriggerFor]="serviceoverview">Service Overview</button>
+        </mat-menu>
+
+        <mat-menu #serviceoverview="matMenu" xPosition="after">
+            <button mat-menu-item>Feature programs</button>
+            <button mat-menu-item>News & Events</button>
+        </mat-menu> 
+
+        <mat-menu #multimedia="matMenu" xPosition="after">
+            <button mat-menu-item>Video Gallery</button>
+            <button mat-menu-item>Picture Gallery</button>
+          </mat-menu>
+
+    </mat-toolbar-row>
+
+
+
+</mat-toolbar>

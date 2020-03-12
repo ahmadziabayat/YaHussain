@@ -1,0 +1,9 @@
+.overflowTest {
+    width: 100vw;
+    flex-basis: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+    hyphens: auto;
+}
