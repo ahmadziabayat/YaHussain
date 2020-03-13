@@ -15,6 +15,9 @@ import { MaterialModule } from './material-module/material.module';
 import { SidenavService } from './services/sidenav.service';
 import { VisionMissionValueComponent } from './vision-mission-value/vision-mission-value.component';
 import { HistoryTimelineComponent } from './history-timeline/history-timeline.component';
+import { CalenderRightPanelComponent } from './calender-right-panel/calender-right-panel.component';
+
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { HistoryTimelineComponent } from './history-timeline/history-timeline.co
     SidenavComponent,
     HeaderComponent,
     VisionMissionValueComponent,
-    HistoryTimelineComponent
+    HistoryTimelineComponent,
+    CalenderRightPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,7 @@ import { HistoryTimelineComponent } from './history-timeline/history-timeline.co
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MaterialModule
   ],
-  providers: [SidenavService],
+  providers: [SidenavService,  {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' }}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
