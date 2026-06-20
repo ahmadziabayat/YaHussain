@@ -116,6 +116,15 @@
             ]
           }
         },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -130,5 +139,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

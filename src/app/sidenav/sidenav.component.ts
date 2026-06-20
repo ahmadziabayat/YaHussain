@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { Component, OnDestroy, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { SidenavService } from '../services/sidenav.service';
@@ -50,7 +50,7 @@ const menuData: menuInterface[] = [
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent implements OnInit, OnDestroy {
+export class SidenavComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
   fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
   private _mobileQueryListener: () => void;
@@ -68,9 +68,6 @@ export class SidenavComponent implements OnInit, OnDestroy {
   }
 
   hasChild = (_: number, node: menuInterface) => !!node.children && node.children.length > 0;
-
-  ngOnInit(): void {
-  }
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
