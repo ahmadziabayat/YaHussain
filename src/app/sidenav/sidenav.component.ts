@@ -8,6 +8,7 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
 
 interface menuInterface {
   name: string;
+  route?: string;
   children?: menuInterface[];
 }
 
@@ -15,32 +16,35 @@ const menuData: menuInterface[] = [
   {
     name: "About Us",
     children: [
-      { name: "Vision, Mission & Value" },
-      { name: "History and Timeline" },
-      { name: "Programs" },
-      { name: "Membership" },
-      { name: "Board of Director" },
-      { name: "Contact Us" }
+      { name: "Vision, Mission & Value", route: "Vision_Mission_And_Value" },
+      { name: "History and Timeline", route: "History_And_Timeline" },
+      { name: "Programs", route: "Programs" },
+      { name: "Membership", route: "Membership" },
+      { name: "Board of Director", route: "Board_of_Director" },
+      { name: "Contact Us", route: "Contact_Us" }
     ]
   },
   {
     name: "Program & Services",
+    route: "Program_Service",
     children: [
       {
         name: "Service overview",
+        route: "Program_Service/Service_Overview",
         children: [
-          { name: "Feature programs" },
-          { name: "News & Events" }
+          { name: "Feature programs", route: "Program_Service/Service_Overview/Feature_Programs" },
+          { name: "News & Events", route: "Program_Service/Service_Overview/News_And_Events" }
         ]
       }
     ]
   },
   {
     name: "Multimedia",
+    route: "Multimedia",
     children: [
-      {name: "Video Gallery"},
-      {name: "Picture Gallery"}
-  ]
+      { name: "Video Gallery", route: "Multimedia/Video_Gallery" },
+      { name: "Picture Gallery", route: "Multimedia/Picture_Gallery" }
+    ]
   }
 
 ];
@@ -68,6 +72,10 @@ export class SidenavComponent implements OnDestroy {
   }
 
   hasChild = (_: number, node: menuInterface) => !!node.children && node.children.length > 0;
+
+  getRouteArray(route: string): string[] {
+    return route ? ['/', ...route.split('/')] : ['/'];
+  }
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);

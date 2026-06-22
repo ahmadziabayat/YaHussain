@@ -16,6 +16,17 @@ import { SidenavService } from './services/sidenav.service';
 import { VisionMissionValueComponent } from './vision-mission-value/vision-mission-value.component';
 import { HistoryTimelineComponent } from './history-timeline/history-timeline.component';
 import { CalenderRightPanelComponent } from './calender-right-panel/calender-right-panel.component';
+import { ProgramsComponent } from './programs/programs.component';
+import { MembershipComponent } from './membership/membership.component';
+import { BoardOfDirectorComponent } from './board-of-director/board-of-director.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ProgramServiceComponent } from './program-service/program-service.component';
+import { MultimediaComponent } from './multimedia/multimedia.component';
+import { ServiceOverviewComponent } from './service-overview/service-overview.component';
+import { FeatureProgramsComponent } from './feature-programs/feature-programs.component';
+import { NewsEventsComponent } from './news-events/news-events.component';
+import { VideoGalleryComponent } from './video-gallery/video-gallery.component';
+import { PictureGalleryComponent } from './picture-gallery/picture-gallery.component';
 
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
@@ -27,7 +38,18 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
     HeaderComponent,
     VisionMissionValueComponent,
     HistoryTimelineComponent,
-    CalenderRightPanelComponent
+    CalenderRightPanelComponent,
+    ProgramsComponent,
+    MembershipComponent,
+    BoardOfDirectorComponent,
+    ContactUsComponent,
+    ProgramServiceComponent,
+    MultimediaComponent,
+    ServiceOverviewComponent,
+    FeatureProgramsComponent,
+    NewsEventsComponent,
+    VideoGalleryComponent,
+    PictureGalleryComponent
   ],
   imports: [
     BrowserModule,

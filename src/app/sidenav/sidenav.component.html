@@ -8,7 +8,12 @@
               <li class="mat-tree-node">
                 <!-- use a disabled button to provide padding for tree leaf -->
                 <button mat-icon-button disabled></button>
-                <a mat-button routerLink="/{{node.name}}" routerLinkActive="active">{{node.name}}</a>
+                <ng-container *ngIf="node.route; else plainName">
+                  <a mat-button [routerLink]="getRouteArray(node.route)" routerLinkActive="active">{{node.name}}</a>
+                </ng-container>
+                <ng-template #plainName>
+                  <span class="mat-button">{{node.name}}</span>
+                </ng-template>
                 
               </li>
             </mat-tree-node>
