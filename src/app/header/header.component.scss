@@ -1,7 +1,62 @@
-.padding-icon {
-    padding: 0 14px;
+.menu-toggle-button {
+  margin-right: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.app-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobile-language-toggle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
   }
 
-  .example-spacer {
-    flex: 1 1 auto;
+  .mobile-language-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  .menu-toggle-button {
+    margin-right: 12px;
+  }
+
+  .app-title {
+    max-width: calc(100vw - 128px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 0.95rem;
+  }
+}

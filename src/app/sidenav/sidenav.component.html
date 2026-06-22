@@ -1,7 +1,7 @@
 <app-header [inputSideNav]="rightsidenav"></app-header>
 
-<mat-drawer-container class="body-container" [hasBackdrop]="false" autosize>
-  <mat-drawer #rightsidenav mode="side" class="padding-sidenav">
+<mat-drawer-container class="body-container" [hasBackdrop]="mobileQuery.matches" autosize>
+  <mat-drawer #rightsidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches" class="padding-sidenav">
     <mat-tree [dataSource]="menuListData" [treeControl]="menuControl" class="example-tree">
       <!-- This is the tree node template for leaf nodes -->
       <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
