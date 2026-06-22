@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "aboutUs": "About Us",
+    "visionMissionValue": "Vision, Mission & Value",
+    "historyTimeline": "History and Timeline",
+    "programs": "Programs",
+    "membership": "Membership",
+    "boardOfDirector": "Board of Director",
+    "contactUs": "Contact Us",
+    "programServices": "Program & Services",
+    "serviceOverview": "Service overview",
+    "featurePrograms": "Feature programs",
+    "newsEvents": "News & Events",
+    "multimedia": "Multimedia",
+    "videoGallery": "Video Gallery",
+    "pictureGallery": "Picture Gallery"
+  },
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "dari": "Dari",
+    "home": "Home"
+  }
+}
