@@ -1,0 +1,24 @@
+{
+  "navigation": {
+    "aboutUs": "درباره ما",
+    "visionMissionValue": "دید، رسالت و ارزش‌ها",
+    "historyTimeline": "تاریخچه و خط زمانی",
+    "programs": "برنامه‌ها",
+    "membership": "عضویت",
+    "boardOfDirector": "هیأت مدیران",
+    "contactUs": "تماس با ما",
+    "programServices": "برنامه و خدمات",
+    "serviceOverview": "نمای کلی خدمات",
+    "featurePrograms": "برنامه‌های ویژه",
+    "newsEvents": "اخبار و رویدادها",
+    "multimedia": "چندرسانه‌ای",
+    "videoGallery": "گالری ویدیو",
+    "pictureGallery": "گالری عکس"
+  },
+  "common": {
+    "language": "زبان",
+    "english": "English",
+    "dari": "دری",
+    "home": "خانه"
+  }
+}
